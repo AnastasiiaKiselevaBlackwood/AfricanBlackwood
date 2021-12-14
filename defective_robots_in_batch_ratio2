@@ -1,0 +1,15 @@
+robots_in_batch = 1000  # не меняйте значение
+defective_robots_in_batch = 8  # не меняйте значение
+print('Хотим сообщить, что наши роботы прекрасны и брака почти нет.') 
+print('Из партии, которую мы вам переслали, в размере')
+print(robots_in_batch)     
+print('единиц, всего лишь')     
+print(defective_robots_in_batch)
+print('роботов были бракованными. Что составляет всего лишь')
+print(defective_robots_in_batch / robots_in_batch * 100)
+print('процента. Очень вас любим и ценим.')
+print()
+print('Засим прощаюсь.')
+print('С уважением и любовью,')
+print('Пётр Андреевич')
+print('тел. +7123981234')
