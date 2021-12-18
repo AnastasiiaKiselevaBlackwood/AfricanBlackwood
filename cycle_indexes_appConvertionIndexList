@@ -1,0 +1,9 @@
+installs = [5018, 4312, 4208, 3665, 3957, 4912, 5074, 5165, 4704, 4447, 4189, 4371]
+payers = [75, 48, 65, 68, 74, 67, 71, 65, 90, 85, 79, 81]
+
+conversions = []
+
+for value in range(len(installs)):
+    conversions.append(payers[value] / installs[value]) # напишите код здесь
+
+print(conversions) # выводим новый список на экран
