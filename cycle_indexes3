@@ -1,0 +1,6 @@
+payers = [75, 48, 65, 68, 74, 67, 71, 65, 90, 85, 79, 81]
+purchase_amount = 5  # сумма покупки в долларах
+
+
+for value in range(len(payers)):
+    print(payers[value] * purchase_amount)  
