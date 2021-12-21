@@ -1,0 +1,12 @@
+import pandas
+data = pandas.read_csv('app_stats.csv')
+
+payments = list(data['payments']) # список с количеством платежей
+installs = list(data['installs']) # список с количеством установок
+
+conversions = []
+for index in range(len(payments)):
+    conversions.append(payments[index] / installs[index])
+# ваш код здесь
+
+print(conversions) # выводим список conversions на экран
