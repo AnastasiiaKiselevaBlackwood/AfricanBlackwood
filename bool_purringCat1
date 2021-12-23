@@ -1,0 +1,8 @@
+is_purring = False
+is_content = True
+
+is_purring = is_content
+if is_content == is_purring:
+    # ваш код здесь
+
+    print(is_purring)
