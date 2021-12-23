@@ -1,0 +1,7 @@
+is_purring = False
+is_content = True
+clock = 10
+
+is_purring = is_content
+if is_purring == is_content: # ваш код здесь
+    print(is_purring or clock == 10)
