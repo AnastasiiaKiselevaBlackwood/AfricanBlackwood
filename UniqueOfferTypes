@@ -1,0 +1,10 @@
+import pandas
+realty_df = pandas.read_csv('yandex_realty_data.csv')
+
+unique_offer_types = []
+
+for offer_type in realty_df['offer_type']:
+    if offer_type not in unique_offer_types:
+        unique_offer_types.append(offer_type)
+
+print(unique_offer_types)
