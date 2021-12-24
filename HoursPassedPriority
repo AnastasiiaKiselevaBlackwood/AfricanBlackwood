@@ -1,0 +1,9 @@
+hours_passed = [9, 12, 8, 24, 35, 0, 15, 28]
+
+high_priority = []
+
+for value in range(len(hours_passed)):
+    if hours_passed[value] > 10:
+        high_priority.append(value) # ваш код здесь
+
+print(high_priority)
