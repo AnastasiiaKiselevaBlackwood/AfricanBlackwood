@@ -1,0 +1,14 @@
+prices = [1100, 999, 1000000, 80, 40000]
+addresses = ['Россия, Москва, Берсеневская набережная, 6с1',
+             'Россия, Москва, Болотная набережная, 11с1',
+             'Россия, Москва, Романов переулок, 4',
+             'Россия, Москва, Старая Басманная улица, 20к1',
+             'Россия, Москва, Волгоградский проспект, 32к8']
+
+addresses_with_low_price = []
+
+for value in range(len(prices)):
+    if prices[value] < 1000:
+        addresses_with_low_price.append(addresses[value]) # ваш код здесь
+
+print(addresses_with_low_price)
