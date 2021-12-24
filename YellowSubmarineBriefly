@@ -1,0 +1,9 @@
+yellow_submarine_chorus = ['we', 'all', 'live', 'in', 'a', 'yellow', 'submarine', 'yellow', 'submarine', 'yellow', 'submarine', 'we', 'all', 'live', 'in', 'a', 'yellow', 'submarine', 'yellow', 'submarine', 'yellow', 'submarine']
+
+yellow_submarine_briefly = []
+
+for value in yellow_submarine_chorus:
+    if value not in yellow_submarine_briefly:
+        yellow_submarine_briefly.append(value) # ваш код здесь
+
+print(yellow_submarine_briefly)
