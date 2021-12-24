@@ -1,0 +1,38 @@
+client_message = 'Какой адрес у сервисного центра в Питере?'
+print(client_message)
+
+if ('Здравствуйте' in client_message or 
+    'Добрый день' in client_message or
+    'Доброе утро' in client_message or
+    'Добрый вечер' in client_message or
+    'Привет' in client_message):
+    print('Здравствуйте, с вами говорит искусственный интеллект: Агент Роберт I')
+elif ('поломался' in client_message or
+      'сломался' in client_message or
+      'не работает' in client_message or
+      'кусается' in client_message or
+      'завис' in client_message):
+    print('Очень жаль! С ними такое обычно не случается. Попробуйте перезагрузить.')
+elif ('телефон' in client_message or 
+      'звонить' in client_message):
+    print('Наш телефон: 8 (800) 111-11-11')
+elif ('время работы' in client_message or 
+      'открыты' in client_message):
+    print('С 9 утра до 20 вечера в любой день недели')
+elif ('адрес' in client_message):
+    moscow_in_message = ('Москва, ул. Льва Толстого, 16')
+    piter_in_message = ('Санкт-Петербург, Пискарёвский проспект, 2, корп. 2')   
+    city_is_not_mentioned = ('Москва, ул. Льва Толстого, 16', 'Санкт-Петербург, Пискарёвский проспект, 2, корп. 2')
+    if ('Москв' in client_message or 
+        'мск' in client_message):
+        print(moscow_in_message)
+    if ('Петербург' in client_message or 
+        'Питер' in client_message):
+        print(piter_in_message)
+    if not ('Москв' or 'мск'or 'Петербург' or 'Питер' in client_message):
+        print(city_is_not_mentioned) # добавьте условия для адреса
+elif ('о свидания' in client_message or
+      'пасибо' in client_message): 
+    print('Спасибо, что обратились! До свидания!')
+else:
+    print('Не могу помочь... Передам ваш вопрос специалисту.')
