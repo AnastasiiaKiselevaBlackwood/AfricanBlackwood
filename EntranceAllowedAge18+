@@ -1,0 +1,9 @@
+visitors_age = [17, 10, 96, 30, 18, 82, 13, 84, 15, 41]
+
+entrance_allowed = [] # создайте пустой список entrance_allowed
+
+for value in visitors_age: # пройдите циклом for по исходному списку
+    if value >= 18: # проверьте, что число больше или равно 18
+        entrance_allowed.append(value) # если это так – положите его в список entrance_allowed
+
+print(entrance_allowed)
