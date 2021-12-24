@@ -1,0 +1,9 @@
+visitors_age = [17, 10, 96, 30, 18, 82, 13, 84, 15, 41]
+
+counter = 0
+
+for value in visitors_age:
+    if value >= 18:
+        counter = counter + 1 # ваш код здесь
+
+print(counter)
