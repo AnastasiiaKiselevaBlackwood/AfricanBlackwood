@@ -1,0 +1,10 @@
+julia_songs = [145678, 297863, 966387, 374981, 746397, 197638]
+mary_songs = [576093, 197638, 736901, 297863, 374981, 871532]
+
+mary_julia_songs = []
+
+for value in julia_songs:
+    if value in mary_songs:  # ваш код здесь
+        mary_julia_songs.append(value)
+    
+print(mary_julia_songs)
