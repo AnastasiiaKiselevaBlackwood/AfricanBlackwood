@@ -1,0 +1,12 @@
+import pandas
+realty_df = pandas.read_csv('yandex_realty_data.csv')
+
+unique_commercial_types = []
+
+for value in realty_df['commercial_type']:
+    if value not in unique_commercial_types:
+        unique_commercial_types.append(value)
+         # найдите уникальные значения столбца 'commercial_type'
+  # и поместите их в список unique_commercial_types
+
+print(unique_commercial_types)
