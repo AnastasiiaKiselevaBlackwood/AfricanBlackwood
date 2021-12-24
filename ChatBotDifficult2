@@ -1,0 +1,41 @@
+client_message = 'Я уже клавиатуру сломал! Переведи меня на оператора, машина!'
+messages_answered = 2
+
+print(client_message)
+
+forward_to_human_answer = ('Не могу помочь... Передам ваш вопрос специалисту.') # создайте переменную forward_to_human_answer
+
+if messages_answered >= 2:
+    print(forward_to_human_answer) # замените условие в if на проверку числа обращений
+# а исходный if — превратите в elif 
+elif ('Здравствуйте' in client_message or 
+    'Добрый день' in client_message or
+    'Доброе утро' in client_message or
+    'Добрый вечер' in client_message or
+    'Привет' in client_message):
+    print('Здравствуйте, с вами говорит искусственный интеллект: Агент Роберт I')
+elif ('поломался' in client_message or
+      'сломался' in client_message or
+      'не работает' in client_message or
+      'кусается' in client_message or
+      'завис' in client_message):
+    print('Очень жаль! С ними такое обычно не случается. Попробуйте перезагрузить.')
+elif ('телефон' in client_message or 
+      'звонить' in client_message):
+    print('Наш телефон: 8 (800) 111-11-11')
+elif ('время работы' in client_message or 
+      'открыты' in client_message):
+    print('С 9 утра до 20 вечера в любой день недели')
+elif 'адрес' in client_message:
+    moscow_in_message = 'Москв' in client_message or 'мск' in client_message
+    piter_in_message = 'Петербург' in client_message or 'Питер' in client_message
+    city_is_not_mentioned = not (moscow_in_message or piter_in_message)
+    if moscow_in_message or city_is_not_mentioned:
+        print('Москва, ул. Льва Толстого, 16')
+    if piter_in_message or city_is_not_mentioned:
+        print('Санкт-Петербург, Пискаревский проспект, 2, корп. 2')
+elif ('о свидания' in client_message or
+      'пасибо' in client_message): 
+    print('Спасибо, что обратились! До свидания!')
+else:
+    print(forward_to_human_answer) # замените вывод текста на вывод forward_to_human_answer
