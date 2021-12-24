@@ -1,0 +1,14 @@
+client_message = 'Доброе утро'
+print(client_message)
+
+# добавьте к if новые варианты приветствия
+if ('Здравствуйте' in client_message or 
+    'Добрый день' in client_message or 
+    'Добрый вечер' in client_message or
+    'Доброе утро' in client_message or
+    'Привет' in client_message):  
+    print('Здравствуйте, с вами говорит искусственный интеллект: Агент Роберт I')
+elif 'поломался' in client_message:
+    print('Очень жаль! С ними такое обычно не случается. Попробуйте перезагрузить.')
+else:
+    print('Спасибо, что обратились! До свидания!')
