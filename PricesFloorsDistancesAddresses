@@ -1,0 +1,30 @@
+prices = [1100, 999, 80, 80, 40000]
+floors = [10, 1, 1, 4, 30]
+distances = [10, 3, 15, 31, 37]
+addresses = ['Россия, Москва, Берсеневская набережная, 6с1',
+             'Россия, Москва, Болотная набережная, 11с1',
+             'Россия, Москва, Романов переулок, 4',
+             'Россия, Москва, Старая Басманная улица, 20к1',
+             'Россия, Москва, Волгоградский проспект, 32к8']
+
+
+prices_filtered = []
+floors_filtered = [] #  ваш код здесь
+distances_filtered = []
+addresses_filtered = []
+
+for value in range(len(prices)):
+    if (prices[value] < 1000 and
+        floors[value] == 1 and
+        distances[value] <= 15):
+            prices_filtered.append(prices[value])
+            floors_filtered.append(floors[value])
+            distances_filtered.append(distances[value])
+            addresses_filtered.append(addresses[value])
+    
+
+
+print(prices_filtered)
+print(floors_filtered)
+print(distances_filtered)
+print(addresses_filtered)
