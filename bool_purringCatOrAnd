@@ -1,0 +1,8 @@
+is_purring = True
+is_content = True
+clock = 10
+battery = 9
+
+is_purring = (is_content == True or clock == 10) and battery >= 10 # допишите код
+
+print(is_purring)
