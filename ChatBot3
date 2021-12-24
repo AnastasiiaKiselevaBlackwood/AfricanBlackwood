@@ -1,0 +1,27 @@
+client_message = 'Какое у вас время работы?'
+print(client_message)
+
+if ('Здравствуйте' in client_message or 
+    'Добрый день' in client_message or
+    'Доброе утро' in client_message or
+    'Добрый вечер' in client_message or
+    'Привет' in client_message):
+    print('Здравствуйте, с вами говорит искусственный интеллект: Агент Роберт I')
+elif ('поломался' in client_message or
+      'сломался' in client_message or
+      'не работает' in client_message or
+      'кусается' in client_message or
+      'завис' in client_message):
+    print('Очень жаль! С ними такое обычно не случается. Попробуйте перезагрузить.')
+elif ('номер' in client_message or  
+    'телефон' in client_message or
+    'телефона' in client_message or
+    'позвонить' in client_message):
+    print('Наш телефон: 8 (800) 111-11-11') # добавьте новое условие elif — если пользователь спросит о телефоне
+elif ('открыты' in client_message or  
+    'время работы' in client_message or
+    'работаете' in client_message or
+    'режим' in client_message):
+    print('С 9 до 20 в любой день недели.') # и ещё один elif — если спросит о времени работы
+else:
+    print('Спасибо, что обратились! До свидания!')
