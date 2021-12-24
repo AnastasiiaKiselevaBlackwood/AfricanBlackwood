@@ -1,0 +1,29 @@
+client_message = 'Как включить функцию тихого мурчания? Робокот отличный, но будит по ночам.'
+print(client_message)
+
+if ('Здравствуйте' in client_message or 
+    'Добрый день' in client_message or
+    'Доброе утро' in client_message or
+    'Добрый вечер' in client_message or
+    'Привет' in client_message):
+    print('Здравствуйте, с вами говорит искусственный интеллект: Агент Роберт I')
+elif ('поломался' in client_message or
+      'сломался' in client_message or
+      'не работает' in client_message or
+      'кусается' in client_message or
+      'завис' in client_message):
+    print('Очень жаль! С ними такое обычно не случается. Попробуйте перезагрузить.')
+elif ('телефон' in client_message or 
+      'звонить' in client_message):
+    print('Наш телефон: 8 (800) 111-11-11')
+elif ('время работы' in client_message or 
+      'открыты' in client_message):
+    print('С 9 утра до 20 вечера в любой день недели')
+elif ('Спасибо' in client_message or
+      'спасибо' in client_message or
+      'До свидания' in client_message or
+      'до свидания' in client_message):
+    print('Спасибо, что обратились! До свидания!') # добавьте новое условие elif — на случай прощания
+else:
+# измените текст на случай, если ни одно условие не подошло
+    print('Не могу помочь... Передам ваш вопрос специалисту.')
