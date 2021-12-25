@@ -1,0 +1,16 @@
+import pandas
+realty_df = pandas.read_csv('yandex_realty_data.csv')
+
+index = 3  # проверим другой объект
+
+# замените print() конструкцией if-else
+if (realty_df['floor'][index] == 1 and
+    realty_df['area'][index] >= 40 and
+    realty_df['price'][index] <= 190000 and
+    realty_df['commercial_type'][index] in ['FREE_PURPOSE', 'RETAIL'] and
+    realty_df['distance'][index] <= 6.7 and
+    realty_df['already_taken'][index] == 0 and
+    realty_df['competitors'][index] <= 1):
+        print('Объект подходит')
+else:
+    print('Объект не подходит')
