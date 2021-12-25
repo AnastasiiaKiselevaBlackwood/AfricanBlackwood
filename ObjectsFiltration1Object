@@ -1,0 +1,23 @@
+import pandas
+realty_df = pandas.read_csv('yandex_realty_data.csv')
+
+# первый этаж
+print(realty_df['floor'][0] == 1)
+
+# area — не меньше 40
+print(realty_df['area'][0] >= 40)
+
+# price — не больше 190000
+print(realty_df['price'][0] <= 190000)
+
+# commercial_type — либо FREE_PURPOSE, либо RETAIL
+print(realty_df['commercial_type'][0] in ['FREE_PURPOSE', 'RETAIL'])  
+
+# distance не больше 6.7
+print(realty_df['distance'][0] <= 6.7)
+
+# already_taken равен 0
+print(realty_df['already_taken'][0] == 0)
+
+# competitors – не больше 1
+print(realty_df['competitors'][0] <= 1)
