@@ -1,0 +1,22 @@
+import pandas
+data = pandas.read_csv('crops_usa.csv')
+
+acres = list(data['Acres'])
+years = list(data['Year'])
+production = list(data['Production']) # создайте список production
+
+acres_usa = []
+production_usa = [] # создайте список production_usa
+
+for year in range(1980, 2020):
+    acres_one_year = []
+    production_one_year = [] # ваш код здесь
+    for index in range(len(data)):
+        if years[index] == year:
+            acres_one_year.append(acres[index])
+            production_one_year.append(production[index]) # ваш код здесь
+    acres_usa.append(sum(acres_one_year))
+    production_usa.append(sum(production_one_year)) # ваш код здесь
+
+print(acres_usa)
+print(production_usa)
