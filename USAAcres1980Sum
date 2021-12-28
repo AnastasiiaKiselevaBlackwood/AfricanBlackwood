@@ -1,0 +1,14 @@
+import pandas
+data = pandas.read_csv('crops_usa.csv')
+
+acres = list(data['Acres'])
+years = list(data['Year'])
+
+year = 1980
+acres_one_year = []
+
+for index in range(len(data)):
+    if years[index] == year:
+        acres_one_year.append(acres[index])
+
+print(sum(acres_one_year)) # в скобках print() найдите сумму значений acres_one_year
