@@ -1,0 +1,12 @@
+import pandas
+
+data = pandas.read_csv('support_data.csv')
+
+interval = list(data['interval']) # преобразуйте столбец interval в список
+interval = []
+
+for value in data['interval']:
+    if value not in interval:
+        interval.append(value) # отфильтруйте уникальные значения
+
+print(interval) # выведите полученный список на экран
