@@ -1,0 +1,11 @@
+import pandas
+data = pandas.read_csv('crops_usa.csv')
+
+states_unique = [] # создайте список states_unique
+
+for value in data['State']:
+    if value not in states_unique:
+        states_unique.append(value) # добавьте в него уникальные значения из колонки State
+
+print(states_unique)
+print(len(states_unique))  # выведите длину списка states_unique
