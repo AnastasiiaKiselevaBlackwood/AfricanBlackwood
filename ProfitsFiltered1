@@ -1,0 +1,24 @@
+import pandas
+realty_df = pandas.read_csv('yandex_realty_data.csv')
+
+filtered_objects_area = []
+filtered_objects_price = []
+filtered_objects_traffic = []
+filtered_objects_address = []
+filtered_objects_profits = [] # новый список для прибыльности
+
+for index in range(len(realty_df)):
+    if (realty_df['floor'][index] == 1 and
+        realty_df['area'][index] >= 40 and
+        realty_df['price'][index] <= 190000 and
+        realty_df['commercial_type'][index] in ['FREE_PURPOSE', 'RETAIL'] and
+        realty_df['distance'][index] <= 6.7 and
+        realty_df['already_taken'][index] == 0 and
+        realty_df['competitors'][index] <= 1):
+        filtered_objects_area.append(realty_df['area'][index])
+        filtered_objects_price.append(realty_df['price'][index])
+        filtered_objects_traffic.append(realty_df['traffic'][index])
+        filtered_objects_address.append(realty_df['address'][index])
+        filtered_objects_profits.append(realty_df['traffic'][index] * 18 * 1/225 * 0.1 * 21000 * 0.2 * 30 - (realty_df['price'][index] + 2 * 50000 * 1.43))  # добавьте расчёт прибыли
+
+print(max(filtered_objects_profits)) # выведите максимальную прибыльность среди отфильтрованных объектов
