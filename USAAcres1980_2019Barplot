@@ -1,0 +1,24 @@
+import pandas
+data = pandas.read_csv('crops_usa.csv')
+
+acres = list(data['Acres'])
+production = list(data['Production'])
+years = list(data['Year'])
+
+acres_usa = []        # площади посевов в США за каждый год
+production_usa = []   # объёмы урожая за каждый год
+
+for year in range(1980, 2020):
+    acres_one_year = []
+    production_one_year = []
+    for index in range(len(data)):
+        if years[index] == year:
+            acres_one_year.append(acres[index])
+            production_one_year.append(production[index])
+    acres_usa.append(sum(acres_one_year))
+    production_usa.append(sum(production_one_year))
+
+years_unique = list(range(1980, 2020))
+
+import seaborn
+seaborn.barplot(x=years_unique, y=acres_usa) # постройте столбчатую диаграмму
