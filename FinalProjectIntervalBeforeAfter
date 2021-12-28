@@ -1,0 +1,19 @@
+import pandas
+
+data = pandas.read_csv('support_data.csv')
+
+interval = list(data['interval'])
+
+before = []
+after = []
+
+for value in data['interval']:
+    if value == 'До внедрения роботов':
+        before.append(value)
+    if value == 'После внедрения роботов':
+        after.append(value)
+print(len(before))
+print(len(after))
+        
+        
+        # ваш код здесь
