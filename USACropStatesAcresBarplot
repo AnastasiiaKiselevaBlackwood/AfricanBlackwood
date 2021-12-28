@@ -1,0 +1,17 @@
+import pandas
+data = pandas.read_csv('crops_usa.csv')
+
+acres = list(data['Acres'])
+years = list(data['Year'])
+states = list(data['State'])
+
+acres_2019 = []
+states_2019 = []
+
+for index in range(len(years)):
+    if years[index] == 2019:
+        acres_2019.append(acres[index])
+        states_2019.append(states[index])
+
+import seaborn
+seaborn.barplot(x=acres_2019, y=states_2019) # постройте столбчатую диаграмму
