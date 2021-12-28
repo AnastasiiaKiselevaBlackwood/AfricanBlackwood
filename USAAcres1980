@@ -1,0 +1,15 @@
+import pandas
+data = pandas.read_csv('crops_usa.csv')
+
+acres = list(data['Acres'])
+years = list(data['Year'])
+
+year = 1980
+
+acres_one_year = []
+ 
+for index in range(len(acres)):
+    if years[index] == year:
+        acres_one_year.append(acres[index]) # ваш код здесь
+
+print(acres_one_year)
