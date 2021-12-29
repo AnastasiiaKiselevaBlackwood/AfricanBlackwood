@@ -1,0 +1,21 @@
+import pandas
+
+data = pandas.read_csv('support_data.csv')
+
+segment = list(data['segment'])
+robocats = list(data['robocats']) # преобразуйте столбец 'robocats' в список 
+
+counter_0 = 0
+counter_1 = 0
+counter_2 = 0
+
+for value in range(len(segment)):
+    if segment[value] == 'Segment 0':
+        counter_0 += robocats[value]
+    if segment[value] == 'Segment 1':
+        counter_1 += robocats[value]
+    if segment[value] == 'Segment 2':
+        counter_2 += robocats[value]    
+print(counter_0)
+print(counter_1)
+print(counter_2) # ваш код здесь
