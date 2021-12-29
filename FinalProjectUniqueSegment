@@ -1,0 +1,12 @@
+import pandas
+
+data = pandas.read_csv('support_data.csv')
+
+segment = list(data['segment']) # преобразуйте столбец segment в список
+unique_segmant = []
+
+for value in segment:
+    if value not in unique_segmant:
+        unique_segmant.append(value)   # отфильтруйте уникальные значения
+
+print(unique_segmant)  # выведите полученный список на экран
