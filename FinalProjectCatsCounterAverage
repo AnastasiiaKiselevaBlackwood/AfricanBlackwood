@@ -1,0 +1,27 @@
+import pandas
+
+data = pandas.read_csv('support_data.csv')
+
+segment = list(data['segment'])
+robocats = list(data['robocats'])
+
+cats_0 = 0
+cats_1 = 0
+cats_2 = 0
+counter_0 = 0
+counter_1 = 0
+counter_2 = 0
+
+for index in range(len(data)):
+    if segment[index] == 'Segment 0':
+        cats_0 += robocats[index]
+        counter_0 += 1
+    if segment[index] == 'Segment 1':
+        cats_1 += robocats[index]
+        counter_1 += 1
+    if segment[index] == 'Segment 2':
+        cats_2 += robocats[index]
+        counter_2 += 1    
+print(cats_0 / counter_0)
+print(cats_1 / counter_1) 
+print(cats_2 / counter_2)  # ваш код здесь
