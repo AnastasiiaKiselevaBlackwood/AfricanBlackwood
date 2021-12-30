@@ -1,0 +1,13 @@
+import pandas
+import seaborn
+
+data = pandas.read_csv('support_data.csv')
+
+segment = list(data['segment'])
+robocats = list(data['robocats'])
+
+robocats_average = [0.0, 1.0, 9.93483709273183]
+segments = ['Segment 0', 'Segment 1', 'Segment 2']
+
+import seaborn
+seaborn.barplot(x=robocats_average, y=segments) # ваш код здесь
