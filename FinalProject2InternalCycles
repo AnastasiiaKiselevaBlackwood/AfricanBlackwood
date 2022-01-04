@@ -1,0 +1,27 @@
+segments_old = ['Segment 0', 'Segment 1', 'Segment 2']
+segments_new = ['Потенциальные клиенты', 'Обычные клиенты', 'VIP-клиенты']
+intervals = ['До внедрения роботов', 'После внедрения роботов']
+
+# преобразуем столбцы в списки
+intervals_column = list(data['interval'])
+segments_column = list(data['segment'])
+score_column = list(data['score'])
+
+# список для средних оценок
+mean_scores = []
+
+# внешний цикл по трём сегментам
+for segment in segments_old:
+    interval_scores = []
+    # вложенный цикл по двум периодам
+    for interval in intervals:
+        score = 0
+        counter = 0
+        # вложенный цикл по строкам
+        for index in range(len(data)):
+            if (segments_column[index] == segment and
+                intervals_column[index] == interval):
+                score += score_column[index]
+                counter += 1
+        interval_scores.append(score / counter)
+    mean_scores.append(interval_scores)
