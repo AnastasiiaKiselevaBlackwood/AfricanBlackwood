@@ -1,0 +1,29 @@
+import pandas
+import seaborn
+
+data = pandas.read_csv('support_data.csv')
+
+score_column = list(data['score'])
+intervals_column = list(data['interval'])
+promo_column = list(data['promo'])
+
+# список всех оценок
+scores = list(range(11))
+
+# ваш код здесь
+promo_probability = []
+for value in scores:
+    promo_num = 0
+    scores_num = 0
+    
+    
+    for index in range(len(data)):
+        if (intervals_column[index] == 'До внедрения роботов' and
+            score_column[index] == value):
+            promo_num += promo_column[index]
+            scores_num += 1
+    
+    
+    promo_probability.append(promo_num / scores_num)
+    
+seaborn.barplot(x=scores, y=promo_probability)    
